@@ -1,0 +1,144 @@
+:root {
+    --color-dark-gold: #8f6000;
+}
+
+* {
+	font-family: bahnschrift, arial;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+header {
+    width: 100vw;
+    position: fixed;
+    z-index: 95;
+}
+
+    header > #primary-header {
+        background-color: black;
+        color: white;
+        padding: 0.2rem 1rem;
+        height: 3rem;
+        width: 100vw;
+        display: flex;
+        z-index: 99;
+        align-items: center;
+        background-image: url("/images/Plan-It-gradient.png");
+        background-position: right;
+        background-repeat: no-repeat;
+        background-attachment: unset;
+    }
+
+    header > #secondary-header {
+        width: 100vw;
+        border-image: url("/images/Plan-It-gradient.png") 10 repeat;
+        border-bottom: 10px gold solid;
+    }
+
+        header > #secondary-header > #header-links {
+            box-shadow: 0 0 10px black;
+            width: 100vw;
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 0.2rem 1rem;
+            flex-wrap: wrap;
+        }
+
+            header > #secondary-header > #header-links > a {
+                text-decoration: none;
+                padding-inline: 0.5rem;
+                color: black;
+                background: -webkit-linear-gradient(0deg, black, black 50%, gold 50%, var(--color-dark-gold));
+                background-size: 200%;
+                background-clip: border-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-transform: uppercase;
+                /*border-left: 1px black solid;*/
+                font-weight: lighter;
+                transition: all 0.25s cubic-bezier(.08,.82,.17,1);
+            }
+
+            header > #secondary-header > #header-links > a:hover {
+                background-position-x: right;
+            }
+
+            header > #secondary-header > #header-links > a:last-of-type {
+                border-left: none;
+            }
+
+
+    /*
+	header > .header-main-btn {
+		color: gold;
+		border-radius: 0.5rem;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 2rem;
+		background: #00000070;
+		border: none;
+		line-height: 1rem;
+		backdrop-filter: blur(10px);
+		box-shadow: 0 0 10px black;
+		border-radius: 0.5rem;
+	}
+
+	header > #dropdown-menu {
+		color: white;
+		background-color: #000000b5;
+		position: absolute;
+		display: flex;
+		top: 3rem;
+		width: 50rem;
+		right: 0;
+		height: 20rem;
+		border-radius: 0 0 0 1rem;
+		backdrop-filter: blur(20px) brightness(0.25);
+		border: 1px solid black;
+		padding: 1rem;
+		justify-content: space-evenly;
+		box-shadow: 0px 5px 10px black;
+		z-index: 95;
+		transform: translateX(100%);
+		transition: opacity 0.25s cubic-bezier(.46,.03,.52,.96), transform 0s linear 0.25s;
+		opacity: 0;
+	}
+
+	header > #dropdown-menu.show {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	header > #dropdown-menu > div {
+		flex: 1;
+	}
+    */
+
+.logo {
+	height: 100%;
+	margin-inline: 0.5rem;
+}
+
+.title {
+	text-transform: uppercase;
+	background: -webkit-linear-gradient(0deg, gold, yellow, grey, white, gold);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	letter-spacing: 0.5rem;
+	text-decoration: none;
+}
+
+.to-right {
+	margin-left: auto;
+}
+
+
+@media screen and (max-width: 600px) {
+    header > #secondary-header > #header-links {
+        justify-content: space-evenly;
+    }
+}
