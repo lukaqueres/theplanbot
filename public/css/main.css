@@ -3,9 +3,10 @@
 }
 
 * {
-	font-family: bahnschrift, arial;
-	margin: 0;
-	box-sizing: border-box;
+    font-family: bahnschrift, arial;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: lighter;
 }
 
 button:hover {
@@ -13,8 +14,7 @@ button:hover {
 }
 
 header {
-    width: 100vw;
-    position: fixed;
+    /*position: fixed;*/
     z-index: 95;
 }
 
@@ -23,7 +23,6 @@ header {
         color: white;
         padding: 0.2rem 1rem;
         height: 3rem;
-        width: 100vw;
         display: flex;
         z-index: 99;
         align-items: center;
@@ -34,21 +33,19 @@ header {
     }
 
     header > #secondary-header {
-        width: 100vw;
         border-image: url("/images/Plan-It-gradient.png") 10 repeat;
         border-bottom: 10px gold solid;
     }
 
         header > #secondary-header > #header-links {
             box-shadow: 0 0 10px black;
-            width: 100vw;
             display: flex;
             flex-direction: row-reverse;
             padding: 0.2rem 1rem;
             flex-wrap: wrap;
         }
 
-            header > #secondary-header > #header-links > a {
+            :is(header, footer) a {
                 text-decoration: none;
                 padding-inline: 0.5rem;
                 color: black;
@@ -63,60 +60,43 @@ header {
                 transition: all 0.25s cubic-bezier(.08,.82,.17,1);
             }
 
-            header > #secondary-header > #header-links > a:hover {
+            :is(header, footer) a:hover {
                 background-position-x: right;
             }
 
-            header > #secondary-header > #header-links > a:last-of-type {
-                border-left: none;
-            }
 
+main {
+    text-align: center;
+    height: 1000px;
+}
 
-    /*
-	header > .header-main-btn {
-		color: gold;
-		border-radius: 0.5rem;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-size: 2rem;
-		background: #00000070;
-		border: none;
-		line-height: 1rem;
-		backdrop-filter: blur(10px);
-		box-shadow: 0 0 10px black;
-		border-radius: 0.5rem;
-	}
+footer {
+    height: 4rem;
+    display: flex;
+    padding: 0.5rem 0rem;
+    flex-direction: column;
+    background-image: url("/images/Plan-It-gradient.png");
+    background-position: bottom;
+    background-attachment: unset;
+    text-align: center;
+}
 
-	header > #dropdown-menu {
-		color: white;
-		background-color: #000000b5;
-		position: absolute;
-		display: flex;
-		top: 3rem;
-		width: 50rem;
-		right: 0;
-		height: 20rem;
-		border-radius: 0 0 0 1rem;
-		backdrop-filter: blur(20px) brightness(0.25);
-		border: 1px solid black;
-		padding: 1rem;
-		justify-content: space-evenly;
-		box-shadow: 0px 5px 10px black;
-		z-index: 95;
-		transform: translateX(100%);
-		transition: opacity 0.25s cubic-bezier(.46,.03,.52,.96), transform 0s linear 0.25s;
-		opacity: 0;
-	}
+    footer > :is(#footer-links, #footer-details) {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
 
-	header > #dropdown-menu.show {
-		transform: translateX(0);
-		opacity: 1;
-	}
+        footer > :is(#footer-links, #footer-details) > * {
+            margin-inline: 0.5rem;
+        }
 
-	header > #dropdown-menu > div {
-		flex: 1;
-	}
-    */
+    footer > #footer-details {
+        font-size: 1rem;
+    }
+
 
 .logo {
 	height: 100%;

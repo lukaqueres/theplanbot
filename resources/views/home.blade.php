@@ -19,11 +19,22 @@
                 <a href="#">Authorize</a>
                 <a href="#">Commands</a>
                 <a href="#">Embeds</a>
-                <a href="#">Terms of service</a>
-                <a href="#">Privacy Policy</a>
             </div>
 		</div>
 	</header>
+	<main>
+		<h1>Welcome to Plan It</h1>
+	</main>
+	<footer>
+        <div id="footer-links">
+            <a href="#">Terms of service</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+		<div id="footer-details">
+			<h4>Plan It 2023</h4>
+			<h4>By Lucas</h4>
+		</div>
+	</footer>
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
